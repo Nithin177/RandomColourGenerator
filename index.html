@@ -3,45 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cursor animation</title>
-    <link rel="stylesheet" href="style.css">
-
+    <title>Random Color Generator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Fixed the link tag -->
 </head>
 <body>
-    <div class="cursor"></div>
-    <section class="main">
-        <h1> CURSOR ANIMATION </h1>
-    </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    const cursor = document.querySelector(".cursor");
-    let timeout;
-
-    // Cursor movement
-    document.addEventListener("mousemove", (e) => {
-        let x = e.pageX;
-        let y = e.pageY;
-
-        cursor.style.top = y + 'px';
-        cursor.style.left = x + 'px';
-        cursor.style.display = 'block';
-
-        // Stop animation
-        function mouseStopped() {
-            cursor.style.display = 'none';
-        }
-
-        // Hide animation
-        clearTimeout(timeout);
-        timeout = setTimeout(mouseStopped, 1000);
-    });
-    // stop the animation off the screen 
-    document.addEventListener("mouseout", () => {
-        cursor.style.display = 'none';
-    });
-});
- 
-      
-    </script>
+    <div class="main">
+        <div class="container">
+            <h2 id="Colorcode">#nit</h2>
+            <button id="colorButton">Click Me</button> <!-- Added an ID to the button for JavaScript -->
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
